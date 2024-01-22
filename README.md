@@ -1,4 +1,8 @@
-# React + Vite
+# Pizza Restaurant Front-End Web App With React & Redux
+
+-- React Router with Data Loading
+-- Tailwind CSS
+-- Redux and Advanced React Router
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
