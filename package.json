@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:visual": "playwright test tests/applitools/matching-levels.spec.js",
+    "test:visual:headed": "playwright test tests/applitools/matching-levels.spec.js --headed"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
@@ -16,10 +18,13 @@
     "react-router-dom": "^6.11.0"
   },
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.46.3",
+    "@playwright/test": "^1.58.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
+    "dotenv": "^17.3.1",
     "eslint": "^8.39.0",
     "eslint-config-react-app": "^7.0.1",
     "postcss": "^8.4.23",
