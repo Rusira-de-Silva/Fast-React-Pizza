@@ -86,7 +86,7 @@ function buildConfig() {
     })
   );
 
-  // Add a small multi-browser matrix so the experiment can show cross-browser capability.
+  // Small multi-browser matrix so the experiment can show cross-browser capability.
   config.addBrowser(1280, 720, BrowserType.CHROME);
   config.addBrowser(1024, 768, BrowserType.FIREFOX);
   config.addDeviceEmulation(
@@ -178,7 +178,6 @@ async function goToMenu(page) {
 async function addItemsAndOpenCart(page) {
   await goToMenu(page);
 
-  // Click by pizza row so re-rendering after the first add does not break index-based locators.
   await page
     .locator('li', { hasText: 'Margherita' })
     .getByRole('button', { name: 'Add to cart' })
@@ -321,7 +320,7 @@ test.describe('Applitools matching-level experiment', () => {
     if (!APPLITOOLS_API_KEY) return;
 
     const summary = await runner.getAllTestResults(false);
-    // Prints a concise summary link and counts in the terminal for your results slide.
+    // Prints a concise summary
     console.log(summary.toString());
   });
 });
